@@ -15,3 +15,4 @@ Here is the tutorial of how to integrate keycloak with spring boot.
 7. Create user: Username: alpha
 8. Credentials -> Set password: alpha
 9. Role mapping -> Assign standard role that we have made before
+10. Follow the commits
