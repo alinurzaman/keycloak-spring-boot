@@ -1,18 +1,14 @@
 Here is the tutorial of how to integrate keycloak with spring boot.
 
-1. Pull docker image of keycloak server: https://quay.io/repository/keycloak/keycloak
-2. Setup the server by type:
-   docker run --name kc -p 8180:8080 \
-    -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin \
-    quay.io/keycloak/keycloak:latest \
-    start-dev
-3. Open http://localhost:8180/
-4. Create realm. Name: springapp
+1. Download keycloak version 20.0.3: https://www.keycloak.org/archive/downloads-20.0.3.html
+2. Open http://localhost:8080/
+3. Create admin; password: admin
+4. Go to administration console. Create realm. Name: SpringBootKeycloak
 5. Create client:
-   - Client ID: springapp-client
-   - redirect_uri: http://localhost:8080/\* {here we will set the URI with server and port of our spring boot application}
-6. Create roles: Role name: standard
-7. Create user: Username: alpha
-8. Credentials -> Set password: alpha
+   - Client ID: login-app
+   - redirect_uri: http://localhost:8081/'\*' {remove '\'. here we will set the URI with server and port of our spring boot application}
+6. Create roles: Role name: user
+7. Create user: Username: user1
+8. Credentials -> Set password: user1
 9. Role mapping -> Assign standard role that we have made before
-10. Follow the commits
+10. Download this source code
